@@ -9,7 +9,7 @@
 class Semaphore : public Object
 {
 private:
-
+	void lock(HANDLE);
 
 public:
 	RTTI_MACRO(Semaphore);
@@ -17,8 +17,8 @@ public:
 	Semaphore();
 	~Semaphore();
 
-	void signal();
-	void wait();
-	bool check();
+	void signal(int*);
+	void wait(int*);
+	bool check(int*);
 };
 
